@@ -1,0 +1,17 @@
+flask
+flask-cors
+pandas
+scikit-learn
+shap
+pyshark
+numpy
+matplotlib
+seaborn
+joblib
+werkzeug
+threading
+csv
+os
+logging
+glob
+collections 

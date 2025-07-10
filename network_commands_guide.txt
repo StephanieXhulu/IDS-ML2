@@ -1,0 +1,63 @@
+NETWORK COMMANDS GUIDE FOR IDS TESTING
+=====================================
+
+The IDS system detects network traffic in real-time. Here are commands you can run
+to generate traffic and see the detection system in action:
+
+1. PING COMMANDS (ICMP Traffic):
+   ping -n 4 8.8.8.8
+   ping -n 4 google.com
+   ping -n 4 github.com
+   ping -n 4 1.1.1.1
+
+2. DNS LOOKUP COMMANDS:
+   nslookup google.com
+   nslookup github.com
+   nslookup stackoverflow.com
+   nslookup microsoft.com
+
+3. TRACEROUTE COMMANDS:
+   tracert -h 5 google.com
+   tracert -h 5 8.8.8.8
+
+4. HTTP REQUESTS (PowerShell):
+   Invoke-WebRequest -Uri "http://www.google.com"
+   Invoke-WebRequest -Uri "http://www.github.com"
+   Invoke-WebRequest -Uri "http://www.stackoverflow.com"
+
+5. PORT SCANS (Potentially Suspicious):
+   Test-NetConnection -ComputerName 127.0.0.1 -Port 80
+   Test-NetConnection -ComputerName 127.0.0.1 -Port 443
+   Test-NetConnection -ComputerName 127.0.0.1 -Port 22
+
+HOW TO CHECK IF DETECTION IS WORKING:
+====================================
+
+1. Check System Status:
+   Invoke-WebRequest -Uri "http://localhost:5000/system-status"
+
+2. Check Live Predictions:
+   Invoke-WebRequest -Uri "http://localhost:5000/live-predictions"
+
+3. Check Forensic Log:
+   Invoke-WebRequest -Uri "http://localhost:5000/forensic-log"
+
+4. Use Web Interface:
+   Open http://localhost:3000 in your browser
+
+WHAT TO LOOK FOR:
+================
+
+- Backend logs showing: "Captured packet #X"
+- System status showing packets analyzed > 0
+- Live predictions showing network traffic
+- Forensic log entries for suspicious activity
+
+TIPS:
+=====
+
+1. Run commands while the backend is running
+2. Check the backend terminal for real-time logs
+3. Use multiple commands to generate more traffic
+4. Some commands might be flagged as suspicious
+5. Normal web browsing also generates detectable traffic 
