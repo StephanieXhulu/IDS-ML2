@@ -1,0 +1,209 @@
+.admin-dashboard-root {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #181c24 0%, #23283a 100%);
+  color: #fff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+.admin-dashboard-header {
+  padding: 32px 0 0 0;
+  text-align: center;
+}
+.admin-dashboard-header h1 {
+  font-size: 2.5em;
+  font-weight: 800;
+  color: #b8d7fa;
+  margin-bottom: 0;
+}
+.admin-dashboard-tabs {
+  margin: 30px 0 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+.admin-dashboard-tabs button {
+  background: #23283a;
+  color: #8fa1c7;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px #0002;
+}
+.admin-dashboard-tabs button.active, .admin-dashboard-tabs button:hover {
+  background: #00eaff;
+  color: #23283a;
+  box-shadow: 0 0 16px #00eaff;
+}
+.admin-dashboard-tabs .home-btn {
+  background: #ff6b35;
+  color: #fff;
+  border: 2px solid #ff6b35;
+  margin-left: 20px;
+}
+.admin-dashboard-tabs .home-btn:hover {
+  background: #ff8c5a;
+  color: #fff;
+  box-shadow: 0 0 16px #ff6b35;
+  border-color: #ff8c5a;
+}
+.admin-dashboard-content {
+  max-width: 1100px;
+  margin: 40px auto 0 auto;
+  background: rgba(24,28,36,0.95);
+  border-radius: 20px;
+  box-shadow: 0 4px 32px #0004;
+  padding: 40px 32px 60px 32px;
+}
+.upload-section {
+  text-align: center;
+}
+.upload-dropzone {
+  margin: 30px auto 20px auto;
+  background: #202534;
+  border: 2px dashed #00eaff;
+  border-radius: 16px;
+  padding: 40px 0;
+  max-width: 420px;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 16px #0004;
+  color: #8fa1c7;
+  font-size: 1.1em;
+}
+.upload-dropzone.drag-active {
+  border-color: #13ffb9;
+  box-shadow: 0 0 24px #13ffb9;
+}
+.upload-btn {
+  background: linear-gradient(45deg, #00eaff, #13ffb9);
+  color: #23283a;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 36px;
+  font-size: 1.1em;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 18px;
+  box-shadow: 0 2px 8px #00eaff44;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+}
+.upload-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.upload-msg {
+  margin-top: 18px;
+  font-size: 1.1em;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 10px 18px;
+  display: inline-block;
+}
+.upload-msg.success {
+  background: #13ffb933;
+  color: #13ffb9;
+}
+.upload-msg.error {
+  background: #ff357a33;
+  color: #ff357a;
+}
+.metrics-cards {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  margin: 32px 0 32px 0;
+  flex-wrap: wrap;
+}
+.metric-card {
+  background: #202534;
+  border-radius: 16px;
+  padding: 28px 32px;
+  min-width: 160px;
+  text-align: center;
+  box-shadow: 0 2px 16px #0004;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.18s, transform 0.18s;
+  font-size: 1.1em;
+}
+.metric-card:hover {
+  box-shadow: 0 0 24px #00eaff;
+  transform: translateY(-4px) scale(1.04);
+}
+.metric-icon {
+  margin-bottom: 10px;
+}
+.metric-label {
+  color: #b8d7fa;
+  font-weight: 700;
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+.metric-value {
+  color: #13ffb9;
+  font-size: 1.5em;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.results-section {
+  text-align: center;
+}
+.results-table-section {
+  margin-top: 32px;
+}
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #181c24;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 0 auto;
+  box-shadow: 0 2px 16px #0004;
+}
+.results-table th, .results-table td {
+  padding: 12px 10px;
+  text-align: center;
+}
+.results-table th {
+  background: #23283a;
+  color: #5ee6a6;
+  font-size: 1.1em;
+}
+.results-table tr.malicious td {
+  color: #ff357a;
+  font-weight: 700;
+  background: #2a1a2a;
+}
+.results-table tr.benign td {
+  color: #13ffb9;
+  background: #1a2a2a;
+}
+.empty-results {
+  color: #8fa1c7;
+  font-size: 1.2em;
+  margin: 40px 0;
+}
+.status-section {
+  text-align: center;
+}
+.guide-section {
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+}
+@media (max-width: 900px) {
+  .admin-dashboard-content {
+    padding: 24px 6px 40px 6px;
+  }
+  .metrics-cards {
+    gap: 12px;
+  }
+  .metric-card {
+    padding: 18px 8px;
+    min-width: 120px;
+  }
+} 
